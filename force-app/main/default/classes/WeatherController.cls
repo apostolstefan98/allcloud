@@ -7,6 +7,8 @@ public with sharing class WeatherController{
             WeatherResult weatherResult = new WeatherResult();
             weatherResult.description = weatherDetail;
             weatherResult.town = a.BillingCity;
+	    a.Current_Weather__c = weatherDetail;
+            upsert a;
             return JSON.serialize(weatherResult);
         }
 		return null;
