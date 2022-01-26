@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="Account weather" icon-name="standard:topic">
+    <div class="slds-m-around_medium">
+        <template if:true={result.description}>
+            {result.description} right now in {result.town}
+        </template>
+        <template if:false={result.description}>
+            We don't have any information about today weather for this account
+        </template>
+    </div>
+  </lightning-card>
+</template>
