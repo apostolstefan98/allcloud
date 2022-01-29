@@ -34,8 +34,8 @@ export default class AccountWeather extends LightningElement {
                 this.lastAddress = this.account.fields.BillingCity.value;
             }
             if (address != this.lastAddress) {
+                this.showNotification();                
                 this.retrieveWeather();
-                this.showNotification();
             }
             
         }
