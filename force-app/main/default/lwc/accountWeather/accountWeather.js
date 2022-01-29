@@ -47,7 +47,6 @@ export default class AccountWeather extends LightningElement {
 
     retrieveWeather(){
         retrieveWeather({accId: this.recordId}).then(response=>{
-            console.log('Stefan');
             this.result = JSON.parse(response);
             console.log(result);
         }).catch(error=>{
